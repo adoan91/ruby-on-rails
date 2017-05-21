@@ -1,0 +1,47 @@
+<h1>Hello from Ruby on Rails - Delta College</h1>
+<p>
+	With new technique, it is now <%= @time %>
+</p>
+<p>
+	Loop from 0 to 5: <br>
+	<% (0..5).each do |i| %>
+	<%= "#{i}" %>
+	<% end %>
+</p>
+
+<p>
+	<a href="/say/goodbye">Good bye!</a>
+</p>
+
+<p>Time to say <%= link_to "Good Bye!", say_goodbye_path %>!</p>
+
+<p>1 + 2 = <%= 1 + 2 %></p>
+
+<p>Concatenation: <%= "cow" + "boy" %></p>
+
+<p>Time in one hour: <%= 1.hour.from_now.localtime %></p>
+
+<ul>
+	<% for file in @files %>
+	<li>file name is: <%= file %></li>
+	<% end %>
+</ul>
+
+<p>
+	<% target = "John" %>
+	<%= "Hello #{target} " %>
+</p>
+
+<p>
+	<%= link_to "Link with parameters", {:action => 'goodbye', :page => 5, :id => 20} %>
+</p>
+
+<p>
+	<strong>First name:</strong>
+	<%= @names['first_name'] %>
+</p>
+
+<p>
+	<strong>Last name:</strong>
+	<%= @names['last_name'] %>
+</p>

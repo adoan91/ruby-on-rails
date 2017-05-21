@@ -1,0 +1,33 @@
+<h1>Good Bye!</h1>
+<% random_names = ["Peter", "Alex", "Jane", "David"] %>
+
+<p>It was nice having you <% random_names.sample %></p>
+
+<p>
+	<a href="/say/hello">Hello</a>
+</p>
+
+<p>Say <%= link_to "Hello!", say_hello_path %>!</p>
+
+<p>
+	<% @array.each do |n| %>
+	<%= n %> <br>
+	<% end %>	
+</p>
+<p>
+	<%= link_to("Contact Page", "/say/contact") %>	
+</p>
+<p>
+	<%= link_to("Contact Page", {:controller => 'say', :action => 'contact'}) %>	
+</p>
+
+<p>
+	<%= link_to "Link with parameters", {:action => 'goodbye', :page => 5, :id => 20} %>
+</p>
+
+<p>
+	ID = <%= @id %><br>
+	ID param = <%= params[:id] %><br>
+	Page = <%= @page %><br>
+	Page param = <%= params[:page] %><br>
+</p>
